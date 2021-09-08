@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="display_value" label="Display Value" language="en" table="x_snc_now_agri_agri_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>display_value</element>
+            <help/>
+            <hint/>
+            <label>Display Value</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_request</name>
+            <plural>Display Values</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>imada.satoshi</sys_created_by>
+            <sys_created_on>2021-08-18 00:31:59</sys_created_on>
+            <sys_id>02133b9d1b023010a0cc20662a4bcb7c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Display Value</sys_name>
+            <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_now_agri_agri_request_display_value_en</sys_update_name>
+            <sys_updated_by>imada.satoshi</sys_updated_by>
+            <sys_updated_on>2021-08-18 00:31:59</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

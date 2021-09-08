@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Agri Ex - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="agri_ex">f20b4b01db8a30502f00152b139619a0</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 03:00:21</sys_created_on>
+        <sys_id>257b0f01db8a30502f00152b13961953</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Agri Ex - Container 1</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sp_container_257b0f01db8a30502f00152b13961953</sys_update_name>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:30:19</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>

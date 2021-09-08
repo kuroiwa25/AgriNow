@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>2</order>
+        <size>6</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">cdc4e7cddb8a30502f00152b13961918</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 04:50:55</sys_created_on>
+        <sys_id>81c4e7cddb8a30502f00152b1396191f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sp_column_81c4e7cddb8a30502f00152b1396191f</sys_update_name>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 04:50:55</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</application>
+        <file_path/>
+        <instance_id>a6a77fbd4f8092407b9b220f0310c71e</instance_id>
+        <instance_name>hackathon133</instance_name>
+        <name>sp_column_81c4e7cddb8a30502f00152b1396191f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>2</order><size>6</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">cdc4e7cddb8a30502f00152b13961918</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>kuroiwa.kota</sys_created_by><sys_created_on>2021-08-17 04:50:55</sys_created_on><sys_id>81c4e7cddb8a30502f00152b1396191f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>2</sys_name><sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package><sys_policy/><sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope><sys_update_name>sp_column_81c4e7cddb8a30502f00152b1396191f</sys_update_name><sys_updated_by>kuroiwa.kota</sys_updated_by><sys_updated_on>2021-08-17 04:50:55</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>374702403</payload_hash>
+        <record_name>2</record_name>
+        <reverted_from/>
+        <source>5c583134db46bc102f00152b139619e8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 04:50:55</sys_created_on>
+        <sys_id>89c4e7cddb8a30502f00152b13961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b5272b83e0000001</sys_recorded_at>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 04:50:55</sys_updated_on>
+        <type>列</type>
+        <update_guid>c1c4e7cd5b8a3050b59854faddb9de20</update_guid>
+        <update_guid_history>c1c4e7cd5b8a3050b59854faddb9de20:374702403</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="2">8f587fc9dbca30502f00152b1396191a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 06:16:31</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>b6086b49a1304414874076ac16783c90</sys_id>
+        <sys_metadata>81c4e7cddb8a30502f00152b1396191f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_scope_delete display_value="">30f5d9e60bfb43b3a26cbf00708813a9</sys_scope_delete>
+        <sys_update_name>sp_column_81c4e7cddb8a30502f00152b1396191f</sys_update_name>
+        <sys_update_version display_value="sp_column_81c4e7cddb8a30502f00152b1396191f">89c4e7cddb8a30502f00152b13961920</sys_update_version>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 06:16:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

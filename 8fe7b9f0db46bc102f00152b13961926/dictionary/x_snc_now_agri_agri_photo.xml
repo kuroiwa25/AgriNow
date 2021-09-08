@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="農家通信" max_length="40" name="x_snc_now_agri_agri_photo" sizeclass="7" type="collection">
+        <element label="Agri Ex" max_length="32" name="agri_ex" reference="x_snc_now_agri_agri_ex" type="reference"/>
+    </element>
+</database>

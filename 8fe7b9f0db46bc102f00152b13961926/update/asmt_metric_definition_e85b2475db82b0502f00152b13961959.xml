@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="asmt_metric_definition">
+    <asmt_metric_definition action="INSERT_OR_UPDATE">
+        <display>N/A</display>
+        <metric/>
+        <normalization_input>0</normalization_input>
+        <order/>
+        <selected_image/>
+        <sys_class_name>asmt_metric_definition</sys_class_name>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-18 23:16:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e85b2475db82b0502f00152b13961959</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>該当なし</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>asmt_metric_definition_e85b2475db82b0502f00152b13961959</sys_update_name>
+        <sys_updated_by>fuji,taro</sys_updated_by>
+        <sys_updated_on>2021-08-20 11:13:08</sys_updated_on>
+        <unselected_image/>
+        <value>-1</value>
+    </asmt_metric_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=e85b2475db82b0502f00152b13961959"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>e85b2475db82b0502f00152b13961959</documentkey>
+        <fieldname>display</fieldname>
+        <language>ja</language>
+        <sys_created_by>fuji,taro</sys_created_by>
+        <sys_created_on>2021-08-19 16:22:54</sys_created_on>
+        <sys_id>c9561cc6db0eb0502f00152b13961937</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>fuji,taro</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:22:54</sys_updated_on>
+        <tablename>asmt_metric_definition</tablename>
+        <value>該当なし</value>
+    </sys_translated_text>
+</record_update>

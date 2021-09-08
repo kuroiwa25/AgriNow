@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_content">
+    <sc_cat_item_content action="INSERT_OR_UPDATE">
+        <access_type>restricted</access_type>
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="農家メニュー">b1794bcddb4a30502f00152b13961991</category>
+        <checked_out/>
+        <content_type>external</content_type>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <kb_article/>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <module/>
+        <name>Approval List</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <owner display_value="Kota Kuroiwa">3a77f7ff1bf9b810a0cc20662a4bcbd5</owner>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("sp?id=approvals&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <published_ref/>
+        <recurring_frequency/>
+        <request_method/>
+        <roles>snc_internal</roles>
+        <sc_catalogs>b3d812b8db86bc102f00152b13961987</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <sc_template/>
+        <short_description/>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <state/>
+        <sys_class_name>sc_cat_item_content</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 02:48:35</sys_created_on>
+        <sys_id>29d5c34ddb4a30502f00152b1396197b</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>申し込み一覧</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sc_cat_item_content_29d5c34ddb4a30502f00152b1396197b</sys_update_name>
+        <sys_updated_by>fuji,taro</sys_updated_by>
+        <sys_updated_on>2021-08-19 15:03:05</sys_updated_on>
+        <target>internal</target>
+        <template/>
+        <template_manager_roles/>
+        <type>item</type>
+        <url>sp?id=approvals</url>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=29d5c34ddb4a30502f00152b1396197b"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>29d5c34ddb4a30502f00152b1396197b</documentkey>
+        <fieldname>description</fieldname>
+        <language>ja</language>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 02:48:36</sys_created_on>
+        <sys_id>19c843cddb4a30502f00152b139619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 02:48:36</sys_updated_on>
+        <tablename>sc_cat_item_content</tablename>
+        <value/>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>29d5c34ddb4a30502f00152b1396197b</documentkey>
+        <fieldname>name</fieldname>
+        <language>ja</language>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 02:48:36</sys_created_on>
+        <sys_id>95c803cddb4a30502f00152b1396199f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>fuji,taro</sys_updated_by>
+        <sys_updated_on>2021-08-19 15:03:05</sys_updated_on>
+        <tablename>sc_cat_item_content</tablename>
+        <value>申し込み一覧</value>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>29d5c34ddb4a30502f00152b1396197b</documentkey>
+        <fieldname>short_description</fieldname>
+        <language>ja</language>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 02:48:36</sys_created_on>
+        <sys_id>d5c803cddb4a30502f00152b139619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 02:48:36</sys_updated_on>
+        <tablename>sc_cat_item_content</tablename>
+        <value/>
+    </sys_translated_text>
+    <fx_price action="delete_multiple" query="id=29d5c34ddb4a30502f00152b1396197b"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>29d5c34ddb4a30502f00152b1396197b</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 02:48:36</sys_created_on>
+        <sys_id>11c803cddb4a30502f00152b1396199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 02:48:36</sys_updated_on>
+        <table>sc_cat_item_content</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

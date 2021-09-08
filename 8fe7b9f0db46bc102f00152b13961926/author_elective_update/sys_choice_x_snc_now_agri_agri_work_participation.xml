@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="participation" table="x_snc_now_agri_agri_work" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>participation</element>
+            <name>x_snc_now_agri_agri_work</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:50</sys_created_on>
+            <sys_id>2d8182f8db46bc102f00152b139619f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>participation</sys_name>
+            <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+            <sys_update_name>sys_choice_x_snc_now_agri_agri_work_participation</sys_update_name>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:50</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a18182f8db46bc102f00152b139619f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:50</sys_updated_on>
+            <value>1人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b1396197a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:50</sys_updated_on>
+            <value>2人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b1396197c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:50</sys_updated_on>
+            <value>3人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b1396197e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:50</sys_updated_on>
+            <value>4人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>5人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961980</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:50</sys_updated_on>
+            <value>5人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>6人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961982</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:50</sys_updated_on>
+            <value>6人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>7人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961984</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:50</sys_updated_on>
+            <value>7人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>8人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961986</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>8人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>9人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961988</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>9人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>10人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b1396198a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>10人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>11人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b1396198c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>11人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>12人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b1396198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>12人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>13人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>13人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>14人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>13</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>14人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>15人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>14</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961994</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>15人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>16人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>15</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>16人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>17人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>16</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b13961998</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>17人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>18人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>17</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b1396199a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>18人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>19人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>18</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>618146f8db46bc102f00152b1396199c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>19人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>20人</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>19</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>718146f8db46bc102f00152b1396199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>20人</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>participation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>20人～</label>
+            <language>en</language>
+            <name>x_snc_now_agri_agri_work</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>kuroiwa.kota</sys_created_by>
+            <sys_created_on>2021-08-16 02:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>718146f8db46bc102f00152b139619a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>kuroiwa.kota</sys_updated_by>
+            <sys_updated_on>2021-08-16 02:58:51</sys_updated_on>
+            <value>20人～</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

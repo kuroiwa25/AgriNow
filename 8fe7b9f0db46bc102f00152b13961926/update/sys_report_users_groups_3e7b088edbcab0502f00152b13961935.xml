@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="参加者間フィードバック:一緒にやってみたいこと">b67b088edbcab0502f00152b13961935</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-19 15:35:31</sys_created_on>
+        <sys_id>3e7b088edbcab0502f00152b13961935</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b67b088edbcab0502f00152b13961935</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sys_report_users_groups_3e7b088edbcab0502f00152b13961935</sys_update_name>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-19 15:35:31</sys_updated_on>
+        <user_id display_value="Satoshi Imada">0c373bff1bf9b810a0cc20662a4bcb78</user_id>
+    </sys_report_users_groups>
+</record_update>

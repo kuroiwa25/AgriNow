@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Agri Ex - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="agri_ex">f20b4b01db8a30502f00152b139619a0</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 02:58:32</sys_created_on>
+        <sys_id>3e0bcb01db8a30502f00152b139619b3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Agri Ex - Container 2</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sp_container_3e0bcb01db8a30502f00152b139619b3</sys_update_name>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 02:59:07</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</application>
+        <file_path/>
+        <instance_id>a6a77fbd4f8092407b9b220f0310c71e</instance_id>
+        <instance_name>hackathon133</instance_name>
+        <name>sp_container_3e0bcb01db8a30502f00152b139619b3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Agri Ex - Container 2</name><order>2</order><sp_page display_value="agri_ex">f20b4b01db8a30502f00152b139619a0</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>kuroiwa.kota</sys_created_by><sys_created_on>2021-08-17 02:58:32</sys_created_on><sys_id>3e0bcb01db8a30502f00152b139619b3</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Agri Ex - Container 2</sys_name><sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package><sys_policy/><sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope><sys_update_name>sp_container_3e0bcb01db8a30502f00152b139619b3</sys_update_name><sys_updated_by>kuroiwa.kota</sys_updated_by><sys_updated_on>2021-08-17 02:59:07</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1835065344</payload_hash>
+        <record_name>Agri Ex - Container 2</record_name>
+        <reverted_from/>
+        <source>5c583134db46bc102f00152b139619e8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 02:59:07</sys_created_on>
+        <sys_id>5b2b0f01db8a30502f00152b13961922</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b520c5e630000001</sys_recorded_at>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 02:59:07</sys_updated_on>
+        <type>サービスポータルコンテナ</type>
+        <update_guid>d32b0f01a58a3050060f7a27c5bf4722</update_guid>
+        <update_guid_history>d32b0f01a58a3050060f7a27c5bf4722:-1835065344,7e0bcb01518a3050920adeb021515ab5:356956481</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Agri Ex - Container 2">d0ab0341db8a30502f00152b139619c7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 03:01:05</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>086f5881fed64d8d992306281f6e87b1</sys_id>
+        <sys_metadata>3e0bcb01db8a30502f00152b139619b3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Agri Ex - Container 2</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_scope_delete display_value="">30f5d9e60bfb43b3a26cbf00708813a9</sys_scope_delete>
+        <sys_update_name>sp_container_3e0bcb01db8a30502f00152b139619b3</sys_update_name>
+        <sys_update_version display_value="sp_container_3e0bcb01db8a30502f00152b139619b3">5b2b0f01db8a30502f00152b13961922</sys_update_version>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 03:01:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,2577 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-quebec-12-09-2020__patch4-hotfix2a-06-25-2021_07-13-2021_1216.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description>リクエストが申請されたとき、承認のフローを流す</description>
+        <internal_name>agri_request_approve</internal_name>
+        <label_cache>[{"name":"db66d17c-01fb-40ac-835e-fd052b189546.table_name","label":"10➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"db66d17c-01fb-40ac-835e-fd052b189546.record","label":"10➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.short_description","label":"Trigger➛Agri Request Record➛簡単な説明","reference":"","reference_display":"簡単な説明","type":"string","base_type":"string","parent_table_name":"x_snc_now_agri_agri_request","column_name":"short_description"},{"name":"Created_1.current.agri_ex.opened_by.email","label":"Trigger➛Agri Request Record➛Agri EX➛開始者➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"23beb7e6-dd52-46e4-a821-fcc5ab37d568.email","label":"9➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8341e818-20ac-42bb-82c8-9d4bb4f05885.table_name","label":"7➛Agri Request Table","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8341e818-20ac-42bb-82c8-9d4bb4f05885.record","label":"7➛Agri Request Record","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ec768bab-f990-4e30-baaf-ba92b5bc0551.email","label":"6➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e84839c-19e5-4287-8f10-d8a667b29415.table_name","label":"4➛Agri Request Table","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e84839c-19e5-4287-8f10-d8a667b29415.record","label":"4➛Agri Request Record","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.user.email","label":"Trigger➛Agri Request Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"Created_1.current.user","label":"Trigger➛Agri Request Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_now_agri_agri_request","column_name":"user"},{"name":"dec472f2-ac52-4b14-9604-8f366b0fc4f1.email","label":"3➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.3a77f7ff1bf9b810a0cc20662a4bcbd5}}","label":"Kota Kuroiwa","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"Created_1.current.agri_ex.assigned_to","label":"Trigger➛Agri Request Record➛Agri EX➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_now_agri_agri_ex","column_name":"assigned_to"},{"name":"Created_1.current","label":"Trigger➛Agri Request Record","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"reference","base_type":"reference","attributes":{}},{"name":"662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state","label":"1➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.agri_ex.opened_by","label":"Trigger➛Agri Request Record➛Agri EX➛開始者","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_now_agri_agri_ex","column_name":"opened_by"},{"name":"Created_1.current.opened_by","label":"Trigger➛Agri Request Record➛開始者","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_now_agri_agri_request","column_name":"opened_by"},{"name":"Created_1.current.opened_by.email","label":"Trigger➛Agri Request Record➛開始者➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"}]</label_cache>
+        <master_snapshot>558135b11b427010a0cc20662a4bcbfa</master_snapshot>
+        <name>Agri Request Approve</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>019d86351b827010a0cc20662a4bcb6e</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 08:57:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>80b31374db8abc102f00152b1396194a</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Agri Request Approve</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sys_hub_flow_80b31374db8abc102f00152b1396194a</sys_update_name>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:27</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=80b31374db8abc102f00152b1396194a"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>80b31374db8abc102f00152b1396194a</documentkey>
+        <fieldname>annotation</fieldname>
+        <language>ja</language>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:18:25</sys_created_on>
+        <sys_id>2880b1711b427010a0cc20662a4bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:18:25</sys_updated_on>
+        <tablename>sys_hub_flow</tablename>
+        <value/>
+    </sys_translated_text>
+    <sys_variable_value action="delete_multiple" query="document_key=80b31374db8abc102f00152b1396194a"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_now_agri_agri_request">agri_work.state=1<item display_value="オープン" endquery="false" field="agri_work.state" goto="false" newquery="false" operator="=" or="false" value="1"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>019d86351b827010a0cc20662a4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:25</sys_updated_on>
+        <table>x_snc_now_agri_agri_request</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"899d86351b827010a0cc20662a4bcb6e","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>80b31374db8abc102f00152b1396194a</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:25</sys_created_on>
+        <sys_id>899d86351b827010a0cc20662a4bcb6e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:25</sys_updated_on>
+        <trigger display_value="">019d86351b827010a0cc20662a4bcb6e</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>899d86351b827010a0cc20662a4bcb6e</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:25</sys_created_on>
+        <sys_id>019d86351b827010a0cc20662a4bcb6f</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=80b31374db8abc102f00152b1396194a^sys_idNOT IN899d86351b827010a0cc20662a4bcb6e"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=80b31374db8abc102f00152b1396194a^sys_idNOT IN4c8d82351b827010a0cc20662a4bcb88"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:05</sys_created_on>
+        <sys_id>4c8d82351b827010a0cc20662a4bcb88</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:26</sys_updated_on>
+        <trigger_definition display_value="作成日時">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4c8d82351b827010a0cc20662a4bcb88"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>4c8d82351b827010a0cc20662a4bcb88</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:05</sys_created_on>
+        <sys_id>408d82351b827010a0cc20662a4bcb8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:05</sys_updated_on>
+        <value>x_snc_now_agri_agri_request</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>4c8d82351b827010a0cc20662a4bcb88</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:05</sys_created_on>
+        <sys_id>888d82351b827010a0cc20662a4bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:05</sys_updated_on>
+        <value>agri_work.state=1</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=80b31374db8abc102f00152b1396194a^sys_idNOT IN84b31374db8abc102f00152b1396194b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>80b31374db8abc102f00152b1396194a</id>
+        <name>Agri Request Approve</name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 08:57:49</sys_created_on>
+        <sys_id>84b31374db8abc102f00152b1396194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 08:57:49</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=80b31374db8abc102f00152b1396194a^sys_idNOT INb46a177cdb0ebc102f00152b1396193a,bc6a177cdb0ebc102f00152b13961933"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</model>
+        <model_id>80b31374db8abc102f00152b1396194a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_80b31374db8abc102f00152b1396194a</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:05</sys_created_on>
+        <sys_id>b46a177cdb0ebc102f00152b1396193a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</model>
+        <model_id>80b31374db8abc102f00152b1396194a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_80b31374db8abc102f00152b1396194a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:05</sys_created_on>
+        <sys_id>bc6a177cdb0ebc102f00152b13961933</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=80b31374db8abc102f00152b1396194a^sys_idNOT IN1c8d82351b827010a0cc20662a4bcbbe,496a177cdb0ebc102f00152b13961961,5c8d82351b827010a0cc20662a4bcbaa,856a177cdb0ebc102f00152b139619a2,d88d82351b827010a0cc20662a4bcbb7,d88d82351b827010a0cc20662a4bcbca"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <order>7</order>
+        <parent_ui_id>f7b0cb84-cece-467f-91e4-13644c814dc5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>1c8d82351b827010a0cc20662a4bcbbe</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-19 08:41:15</sys_updated_on>
+        <ui_id>8341e818-20ac-42bb-82c8-9d4bb4f05885</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1c8d82351b827010a0cc20662a4bcbbe"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1c8d82351b827010a0cc20662a4bcbbe</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>188d82351b827010a0cc20662a4bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value>x_snc_now_agri_agri_request</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1c8d82351b827010a0cc20662a4bcbbe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>548d82351b827010a0cc20662a4bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value>state=2</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1c8d82351b827010a0cc20662a4bcbbe"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>1c8d82351b827010a0cc20662a4bcbbe</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>108d82351b827010a0cc20662a4bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>1c8d82351b827010a0cc20662a4bcbbe</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>5c8d82351b827010a0cc20662a4bcbbf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>1c8d82351b827010a0cc20662a4bcbbe</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d08d82351b827010a0cc20662a4bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>496a177cdb0ebc102f00152b13961961</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-19 08:41:14</sys_updated_on>
+        <ui_id>662dfc04-dc44-4abe-931f-0dbb1151559f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=496a177cdb0ebc102f00152b13961961"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>496a177cdb0ebc102f00152b13961961</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>056a177cdb0ebc102f00152b1396197e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>496a177cdb0ebc102f00152b13961961</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 02:53:43</sys_created_on>
+        <sys_id>371dd5b11b027010a0cc20662a4bcb8d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:05</sys_updated_on>
+        <value/>
+        <variable display_value="Approval Conditions">45f2e9920b10030085c083eb37673aee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>496a177cdb0ebc102f00152b13961961</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>416a177cdb0ebc102f00152b1396197e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 02:53:43</sys_updated_on>
+        <value/>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>496a177cdb0ebc102f00152b13961961</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>c56a177cdb0ebc102f00152b1396197e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=496a177cdb0ebc102f00152b13961961"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>496a177cdb0ebc102f00152b13961961</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>0d6a177cdb0ebc102f00152b1396197d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesRejectsAnyU[{{Created_1.current.agri_ex.opened_by}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>496a177cdb0ebc102f00152b13961961</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>416a177cdb0ebc102f00152b13961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>496a177cdb0ebc102f00152b13961961</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>496a177cdb0ebc102f00152b1396197d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>496a177cdb0ebc102f00152b13961961</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>856a177cdb0ebc102f00152b1396197d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 02:53:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Created_1.current.agri_ex.opened_by}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>496a177cdb0ebc102f00152b13961961</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>cd6a177cdb0ebc102f00152b1396197d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <order>4</order>
+        <parent_ui_id>0780e403-40c0-4790-8e9c-1fefe9458854</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:05</sys_created_on>
+        <sys_id>5c8d82351b827010a0cc20662a4bcbaa</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-19 08:41:15</sys_updated_on>
+        <ui_id>7e84839c-19e5-4287-8f10-d8a667b29415</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5c8d82351b827010a0cc20662a4bcbaa"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5c8d82351b827010a0cc20662a4bcbaa</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>948d82351b827010a0cc20662a4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value>x_snc_now_agri_agri_request</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5c8d82351b827010a0cc20662a4bcbaa</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d08d82351b827010a0cc20662a4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value>state=4</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5c8d82351b827010a0cc20662a4bcbaa"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>5c8d82351b827010a0cc20662a4bcbaa</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>9c8d82351b827010a0cc20662a4bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>5c8d82351b827010a0cc20662a4bcbaa</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d48d82351b827010a0cc20662a4bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>5c8d82351b827010a0cc20662a4bcbaa</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>508d82351b827010a0cc20662a4bcbad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <order>3</order>
+        <parent_ui_id>0780e403-40c0-4790-8e9c-1fefe9458854</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>856a177cdb0ebc102f00152b139619a2</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-19 08:41:15</sys_updated_on>
+        <ui_id>dec472f2-ac52-4b14-9604-8f366b0fc4f1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=856a177cdb0ebc102f00152b139619a2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>856a177cdb0ebc102f00152b139619a2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>896a177cdb0ebc102f00152b139619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>856a177cdb0ebc102f00152b139619a2</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>c56a177cdb0ebc102f00152b139619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <value>&lt;p&gt;リクエストが拒否されました。&lt;/p&gt;</value>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=856a177cdb0ebc102f00152b139619a2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>856a177cdb0ebc102f00152b139619a2</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>0d6a177cdb0ebc102f00152b139619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>856a177cdb0ebc102f00152b139619a2</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>456a177cdb0ebc102f00152b139619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>856a177cdb0ebc102f00152b139619a2</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>496a177cdb0ebc102f00152b139619a4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 02:53:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>856a177cdb0ebc102f00152b139619a2</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>cd6a177cdb0ebc102f00152b139619a4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 02:53:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>856a177cdb0ebc102f00152b139619a2</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>816a177cdb0ebc102f00152b139619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <order>6</order>
+        <parent_ui_id>f7b0cb84-cece-467f-91e4-13644c814dc5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d88d82351b827010a0cc20662a4bcbb7</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-19 08:41:15</sys_updated_on>
+        <ui_id>ec768bab-f990-4e30-baaf-ba92b5bc0551</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d88d82351b827010a0cc20662a4bcbb7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d88d82351b827010a0cc20662a4bcbb7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>1c8d82351b827010a0cc20662a4bcbba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d88d82351b827010a0cc20662a4bcbb7</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>588d82351b827010a0cc20662a4bcbba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value>&lt;p&gt;リクエストが許可されました。&lt;/p&gt;</value>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d88d82351b827010a0cc20662a4bcbb7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>d88d82351b827010a0cc20662a4bcbb7</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>9c8d82351b827010a0cc20662a4bcbb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>d88d82351b827010a0cc20662a4bcbb7</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d48d82351b827010a0cc20662a4bcbba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>d88d82351b827010a0cc20662a4bcbb7</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d88d82351b827010a0cc20662a4bcbb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>d88d82351b827010a0cc20662a4bcbb7</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>508d82351b827010a0cc20662a4bcbba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>d88d82351b827010a0cc20662a4bcbb7</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>148d82351b827010a0cc20662a4bcbba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <order>9</order>
+        <parent_ui_id>fa95617b-68f8-46e2-9709-1ad4c86d3acc</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d88d82351b827010a0cc20662a4bcbca</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-19 08:41:15</sys_updated_on>
+        <ui_id>23beb7e6-dd52-46e4-a821-fcc5ab37d568</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d88d82351b827010a0cc20662a4bcbca"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d88d82351b827010a0cc20662a4bcbca</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>148d82351b827010a0cc20662a4bcbcd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d88d82351b827010a0cc20662a4bcbca</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d48d82351b827010a0cc20662a4bcbcd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d88d82351b827010a0cc20662a4bcbca"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>d88d82351b827010a0cc20662a4bcbca</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>588d82351b827010a0cc20662a4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;リクエストは許可か拒否で選択をお願いします。&lt;br /&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:f87e431a-af33-44b3-8fe6-9e5a7b9f7ad9}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:f87e431a-af33-44b3-8fe6-9e5a7b9f7ad9}}"&gt;&lt;span class="data-pill-content-container"&gt;1&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;承認ステータス&lt;button id="transform_function_facade_f87e431a-af33-44b3-8fe6-9e5a7b9f7ad9" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>d88d82351b827010a0cc20662a4bcbca</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>908d82351b827010a0cc20662a4bcbcd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.short_description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>d88d82351b827010a0cc20662a4bcbca</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>948d82351b827010a0cc20662a4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.agri_ex.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>d88d82351b827010a0cc20662a4bcbca</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>1c8d82351b827010a0cc20662a4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.agri_ex.opened_by}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>d88d82351b827010a0cc20662a4bcbca</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>dc8d82351b827010a0cc20662a4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=80b31374db8abc102f00152b1396194a^sys_idNOT IN096a177cdb0ebc102f00152b1396197f,d08d82351b827010a0cc20662a4bcbc1,d48d82351b827010a0cc20662a4bcbae"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">4d6a177cdb0ebc102f00152b1396197e</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>096a177cdb0ebc102f00152b1396197f</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:26</sys_updated_on>
+        <ui_id>0780e403-40c0-4790-8e9c-1fefe9458854</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=096a177cdb0ebc102f00152b1396197f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>096a177cdb0ebc102f00152b1396197f</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:18:24</sys_created_on>
+        <sys_id>108071711b427010a0cc20662a4bcbe2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:18:24</sys_updated_on>
+        <value>承認が拒否された場合</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=096a177cdb0ebc102f00152b1396197f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>096a177cdb0ebc102f00152b1396197f</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>456a177cdb0ebc102f00152b13961983</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 09:27:06</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}=rejected</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>096a177cdb0ebc102f00152b1396197f</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:18:24</sys_created_on>
+        <sys_id>988071711b427010a0cc20662a4bcbe1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:18:24</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">1c8d82351b827010a0cc20662a4bcbc0</block>
+        <comment/>
+        <connected_to>f7b0cb84-cece-467f-91e4-13644c814dc5</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="そうでない場合">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d08d82351b827010a0cc20662a4bcbc1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:27</sys_updated_on>
+        <ui_id>fa95617b-68f8-46e2-9709-1ad4c86d3acc</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d08d82351b827010a0cc20662a4bcbc1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>d08d82351b827010a0cc20662a4bcbc1</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>588d82351b827010a0cc20662a4bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value>その他の場合</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d08d82351b827010a0cc20662a4bcbc1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>d08d82351b827010a0cc20662a4bcbc1</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d48d82351b827010a0cc20662a4bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}!=approved^NQ{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}!=rejected</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>d08d82351b827010a0cc20662a4bcbc1</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>148d82351b827010a0cc20662a4bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">1c8d82351b827010a0cc20662a4bcbad</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d48d82351b827010a0cc20662a4bcbae</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:27</sys_updated_on>
+        <ui_id>f7b0cb84-cece-467f-91e4-13644c814dc5</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d48d82351b827010a0cc20662a4bcbae"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>d48d82351b827010a0cc20662a4bcbae</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>588d82351b827010a0cc20662a4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <value>承認が許可された場合</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d48d82351b827010a0cc20662a4bcbae"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>d48d82351b827010a0cc20662a4bcbae</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>d48d82351b827010a0cc20662a4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>d48d82351b827010a0cc20662a4bcbae</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>148d82351b827010a0cc20662a4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=80b31374db8abc102f00152b1396194a^sys_idNOT IN208d82351b827010a0cc20662a4bcbd0,588d82351b827010a0cc20662a4bcbcf"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>80b31374db8abc102f00152b1396194a</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>208d82351b827010a0cc20662a4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f87e431a-af33-44b3-8fe6-9e5a7b9f7ad9</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>80b31374db8abc102f00152b1396194a</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:06</sys_created_on>
+        <sys_id>588d82351b827010a0cc20662a4bcbcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:06</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f091ec82-18c1-4ff5-9f1d-df04d9af4cf5</ui_id>
+    </sys_hub_pill_compound>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_80b31374db8abc102f00152b1396194a^sys_idNOT IN108071711b427010a0cc20662a4bcbb4,148071711b427010a0cc20662a4bcbb6,b86a177cdb0ebc102f00152b1396193e,fc6a177cdb0ebc102f00152b13961938"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>レコード</label>
+        <language>ja</language>
+        <name>var__m_sys_hub_flow_input_80b31374db8abc102f00152b1396194a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:18:24</sys_created_on>
+        <sys_id>108071711b427010a0cc20662a4bcbb4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:48</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>テーブル名</label>
+        <language>ja</language>
+        <name>var__m_sys_hub_flow_input_80b31374db8abc102f00152b1396194a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:18:24</sys_created_on>
+        <sys_id>148071711b427010a0cc20662a4bcbb6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:48</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_80b31374db8abc102f00152b1396194a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:06</sys_created_on>
+        <sys_id>b86a177cdb0ebc102f00152b1396193e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_80b31374db8abc102f00152b1396194a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 09:27:05</sys_created_on>
+        <sys_id>fc6a177cdb0ebc102f00152b13961938</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=80b31374db8abc102f00152b1396194a^sys_idNOT IN428175b11b427010a0cc20662a4bcb75"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"428175b11b427010a0cc20662a4bcb75","name":"plan"}}</plan>
+        <plan_id>80b31374db8abc102f00152b1396194a</plan_id>
+        <snapshot>1eacaef91bc27010a0cc20662a4bcb90</snapshot>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>428175b11b427010a0cc20662a4bcb75</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:25</sys_updated_on>
+        <trigger display_value="">019d86351b827010a0cc20662a4bcb6e</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>リクエストが申請されたとき、承認のフローを流す</description>
+        <internal_name>agri_request_approve</internal_name>
+        <label_cache>[{"name":"db66d17c-01fb-40ac-835e-fd052b189546.table_name","label":"10➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"db66d17c-01fb-40ac-835e-fd052b189546.record","label":"10➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.short_description","label":"Trigger➛Agri Request Record➛簡単な説明","reference":"","reference_display":"簡単な説明","type":"string","base_type":"string","parent_table_name":"x_snc_now_agri_agri_request","column_name":"short_description"},{"name":"Created_1.current.agri_ex.opened_by.email","label":"Trigger➛Agri Request Record➛Agri EX➛開始者➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"23beb7e6-dd52-46e4-a821-fcc5ab37d568.email","label":"9➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8341e818-20ac-42bb-82c8-9d4bb4f05885.table_name","label":"7➛Agri Request Table","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8341e818-20ac-42bb-82c8-9d4bb4f05885.record","label":"7➛Agri Request Record","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ec768bab-f990-4e30-baaf-ba92b5bc0551.email","label":"6➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e84839c-19e5-4287-8f10-d8a667b29415.table_name","label":"4➛Agri Request Table","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e84839c-19e5-4287-8f10-d8a667b29415.record","label":"4➛Agri Request Record","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.user.email","label":"Trigger➛Agri Request Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"Created_1.current.user","label":"Trigger➛Agri Request Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_now_agri_agri_request","column_name":"user"},{"name":"dec472f2-ac52-4b14-9604-8f366b0fc4f1.email","label":"3➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.3a77f7ff1bf9b810a0cc20662a4bcbd5}}","label":"Kota Kuroiwa","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"Created_1.current.agri_ex.assigned_to","label":"Trigger➛Agri Request Record➛Agri EX➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_now_agri_agri_ex","column_name":"assigned_to"},{"name":"Created_1.current","label":"Trigger➛Agri Request Record","reference":"x_snc_now_agri_agri_request","reference_display":"Agri Request","type":"reference","base_type":"reference","attributes":{}},{"name":"662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state","label":"1➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.agri_ex.opened_by","label":"Trigger➛Agri Request Record➛Agri EX➛開始者","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_now_agri_agri_ex","column_name":"opened_by"},{"name":"Created_1.current.opened_by","label":"Trigger➛Agri Request Record➛開始者","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_now_agri_agri_request","column_name":"opened_by"},{"name":"Created_1.current.opened_by.email","label":"Trigger➛Agri Request Record➛開始者➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"}]</label_cache>
+        <master>true</master>
+        <name>Agri Request Approve</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Agri Request Approve">80b31374db8abc102f00152b1396194a</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>558135b11b427010a0cc20662a4bcbfa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:23</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=558135b11b427010a0cc20662a4bcbfa"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>558135b11b427010a0cc20662a4bcbfa</documentkey>
+        <fieldname>annotation</fieldname>
+        <language>ja</language>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:50</sys_created_on>
+        <sys_id>518135b11b427010a0cc20662a4bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:50</sys_updated_on>
+        <tablename>sys_hub_flow_snapshot</tablename>
+        <value/>
+    </sys_translated_text>
+    <sys_variable_value action="delete_multiple" query="document_key=558135b11b427010a0cc20662a4bcbfa"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=558135b11b427010a0cc20662a4bcbfa^sys_idNOT IN798175b11b427010a0cc20662a4bcb38"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:52</sys_created_on>
+        <sys_id>798175b11b427010a0cc20662a4bcb38</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:25</sys_updated_on>
+        <trigger_definition display_value="作成日時">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=798175b11b427010a0cc20662a4bcb38"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>798175b11b427010a0cc20662a4bcb38</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:52</sys_created_on>
+        <sys_id>318175b11b427010a0cc20662a4bcb3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:52</sys_updated_on>
+        <value>x_snc_now_agri_agri_request</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>798175b11b427010a0cc20662a4bcb38</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:52</sys_created_on>
+        <sys_id>7d8175b11b427010a0cc20662a4bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:52</sys_updated_on>
+        <value>agri_work.state=1</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=558135b11b427010a0cc20662a4bcbfa^sys_idNOT INdd8135b11b427010a0cc20662a4bcbfb"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>558135b11b427010a0cc20662a4bcbfa</id>
+        <name>Agri Request Approve</name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:50</sys_created_on>
+        <sys_id>dd8135b11b427010a0cc20662a4bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:50</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=558135b11b427010a0cc20662a4bcbfa^sys_idNOT IN558135b11b427010a0cc20662a4bcbfd,ad8175b11b427010a0cc20662a4bcb0f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</model>
+        <model_id>558135b11b427010a0cc20662a4bcbfa</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_558135b11b427010a0cc20662a4bcbfa</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:50</sys_created_on>
+        <sys_id>558135b11b427010a0cc20662a4bcbfd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</model>
+        <model_id>558135b11b427010a0cc20662a4bcbfa</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_558135b11b427010a0cc20662a4bcbfa</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>ad8175b11b427010a0cc20662a4bcb0f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=558135b11b427010a0cc20662a4bcbfa^sys_idNOT IN049d46351b827010a0cc20662a4bcb4b,049d46351b827010a0cc20662a4bcb5b,089d46351b827010a0cc20662a4bcb54,698175b11b427010a0cc20662a4bcb29,809d46351b827010a0cc20662a4bcb63,f18175b11b427010a0cc20662a4bcb35"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <order>4</order>
+        <parent_ui_id>0780e403-40c0-4790-8e9c-1fefe9458854</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>049d46351b827010a0cc20662a4bcb4b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:22</sys_updated_on>
+        <ui_id>7e84839c-19e5-4287-8f10-d8a667b29415</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=049d46351b827010a0cc20662a4bcb4b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>049d46351b827010a0cc20662a4bcb4b</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>009d46351b827010a0cc20662a4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value>x_snc_now_agri_agri_request</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>049d46351b827010a0cc20662a4bcb4b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>4c9d46351b827010a0cc20662a4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value>state=4</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=049d46351b827010a0cc20662a4bcb4b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>049d46351b827010a0cc20662a4bcb4b</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>089d46351b827010a0cc20662a4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>049d46351b827010a0cc20662a4bcb4b</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>449d46351b827010a0cc20662a4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>049d46351b827010a0cc20662a4bcb4b</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>c89d46351b827010a0cc20662a4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <order>7</order>
+        <parent_ui_id>f7b0cb84-cece-467f-91e4-13644c814dc5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>049d46351b827010a0cc20662a4bcb5b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:23</sys_updated_on>
+        <ui_id>8341e818-20ac-42bb-82c8-9d4bb4f05885</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=049d46351b827010a0cc20662a4bcb5b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>049d46351b827010a0cc20662a4bcb5b</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>009d46351b827010a0cc20662a4bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value>x_snc_now_agri_agri_request</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>049d46351b827010a0cc20662a4bcb5b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>4c9d46351b827010a0cc20662a4bcb5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value>state=2</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=049d46351b827010a0cc20662a4bcb5b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>049d46351b827010a0cc20662a4bcb5b</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>089d46351b827010a0cc20662a4bcb5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>049d46351b827010a0cc20662a4bcb5b</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>449d46351b827010a0cc20662a4bcb5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>049d46351b827010a0cc20662a4bcb5b</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>c89d46351b827010a0cc20662a4bcb5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <order>6</order>
+        <parent_ui_id>f7b0cb84-cece-467f-91e4-13644c814dc5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>089d46351b827010a0cc20662a4bcb54</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:23</sys_updated_on>
+        <ui_id>ec768bab-f990-4e30-baaf-ba92b5bc0551</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=089d46351b827010a0cc20662a4bcb54"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>089d46351b827010a0cc20662a4bcb54</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>049d46351b827010a0cc20662a4bcb57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>089d46351b827010a0cc20662a4bcb54</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>409d46351b827010a0cc20662a4bcb57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value>&lt;p&gt;リクエストが許可されました。&lt;/p&gt;</value>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=089d46351b827010a0cc20662a4bcb54"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>089d46351b827010a0cc20662a4bcb54</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>849d46351b827010a0cc20662a4bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>089d46351b827010a0cc20662a4bcb54</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>cc9d46351b827010a0cc20662a4bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>089d46351b827010a0cc20662a4bcb54</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>c09d46351b827010a0cc20662a4bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>089d46351b827010a0cc20662a4bcb54</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>489d46351b827010a0cc20662a4bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>089d46351b827010a0cc20662a4bcb54</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>0c9d46351b827010a0cc20662a4bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>698175b11b427010a0cc20662a4bcb29</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:22</sys_updated_on>
+        <ui_id>662dfc04-dc44-4abe-931f-0dbb1151559f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=698175b11b427010a0cc20662a4bcb29"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>698175b11b427010a0cc20662a4bcb29</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>698175b11b427010a0cc20662a4bcb2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>698175b11b427010a0cc20662a4bcb29</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>a58175b11b427010a0cc20662a4bcb2c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:20</sys_updated_on>
+        <value/>
+        <variable display_value="Approval Conditions">45f2e9920b10030085c083eb37673aee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>698175b11b427010a0cc20662a4bcb29</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>e18175b11b427010a0cc20662a4bcb2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=698175b11b427010a0cc20662a4bcb29"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>698175b11b427010a0cc20662a4bcb29</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>ad8175b11b427010a0cc20662a4bcb2b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:20</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesRejectsAnyU[{{Created_1.current.agri_ex.opened_by}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>698175b11b427010a0cc20662a4bcb29</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>e98175b11b427010a0cc20662a4bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>698175b11b427010a0cc20662a4bcb29</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>298175b11b427010a0cc20662a4bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Created_1.current.agri_ex.opened_by}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>698175b11b427010a0cc20662a4bcb29</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>618175b11b427010a0cc20662a4bcb2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <order>9</order>
+        <parent_ui_id>fa95617b-68f8-46e2-9709-1ad4c86d3acc</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>809d46351b827010a0cc20662a4bcb63</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:23</sys_updated_on>
+        <ui_id>23beb7e6-dd52-46e4-a821-fcc5ab37d568</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=809d46351b827010a0cc20662a4bcb63"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>809d46351b827010a0cc20662a4bcb63</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>8c9d46351b827010a0cc20662a4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>809d46351b827010a0cc20662a4bcb63</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>c89d46351b827010a0cc20662a4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=809d46351b827010a0cc20662a4bcb63"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>809d46351b827010a0cc20662a4bcb63</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>009d46351b827010a0cc20662a4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;リクエストは許可か拒否で選択をお願いします。&lt;br /&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:f87e431a-af33-44b3-8fe6-9e5a7b9f7ad9}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:f87e431a-af33-44b3-8fe6-9e5a7b9f7ad9}}"&gt;&lt;span class="data-pill-content-container"&gt;1&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;承認ステータス&lt;button id="transform_function_facade_f87e431a-af33-44b3-8fe6-9e5a7b9f7ad9" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>809d46351b827010a0cc20662a4bcb63</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>489d46351b827010a0cc20662a4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.short_description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>809d46351b827010a0cc20662a4bcb63</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>4c9d46351b827010a0cc20662a4bcb64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.agri_ex.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>809d46351b827010a0cc20662a4bcb63</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>c09d46351b827010a0cc20662a4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.agri_ex.opened_by}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>809d46351b827010a0cc20662a4bcb63</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>849d46351b827010a0cc20662a4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <order>3</order>
+        <parent_ui_id>0780e403-40c0-4790-8e9c-1fefe9458854</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>f18175b11b427010a0cc20662a4bcb35</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:22</sys_updated_on>
+        <ui_id>dec472f2-ac52-4b14-9604-8f366b0fc4f1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f18175b11b427010a0cc20662a4bcb35"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f18175b11b427010a0cc20662a4bcb35</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>318175b11b427010a0cc20662a4bcb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <value>&lt;p&gt;リクエストが拒否されました。&lt;/p&gt;</value>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f18175b11b427010a0cc20662a4bcb35</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>f18175b11b427010a0cc20662a4bcb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <value>sys_user</value>
+        <variable display_value="Table">19806bf4a70323008299b39f087901d4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f18175b11b427010a0cc20662a4bcb35"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>f18175b11b427010a0cc20662a4bcb35</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>758175b11b427010a0cc20662a4bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>f18175b11b427010a0cc20662a4bcb35</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>bd8175b11b427010a0cc20662a4bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>f18175b11b427010a0cc20662a4bcb35</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>b18175b11b427010a0cc20662a4bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>f18175b11b427010a0cc20662a4bcb35</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>398175b11b427010a0cc20662a4bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Created_1.current.opened_by}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>f18175b11b427010a0cc20662a4bcb35</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>f98175b11b427010a0cc20662a4bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=558135b11b427010a0cc20662a4bcbfa^sys_idNOT IN449d46351b827010a0cc20662a4bcb7d,a98175b11b427010a0cc20662a4bcb1d,c89d46351b827010a0cc20662a4bcb79"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">1c8d82351b827010a0cc20662a4bcbc0</block>
+        <comment/>
+        <connected_to>f7b0cb84-cece-467f-91e4-13644c814dc5</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="そうでない場合">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>449d46351b827010a0cc20662a4bcb7d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:23</sys_updated_on>
+        <ui_id>fa95617b-68f8-46e2-9709-1ad4c86d3acc</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=449d46351b827010a0cc20662a4bcb7d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>449d46351b827010a0cc20662a4bcb7d</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>089d46351b827010a0cc20662a4bcb80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value>その他の場合</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=449d46351b827010a0cc20662a4bcb7d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>449d46351b827010a0cc20662a4bcb7d</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>849d46351b827010a0cc20662a4bcb80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}!=approved^NQ{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}!=rejected</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>449d46351b827010a0cc20662a4bcb7d</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>c09d46351b827010a0cc20662a4bcb80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">4d6a177cdb0ebc102f00152b1396197e</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>a98175b11b427010a0cc20662a4bcb1d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:22</sys_updated_on>
+        <ui_id>0780e403-40c0-4790-8e9c-1fefe9458854</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=a98175b11b427010a0cc20662a4bcb1d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>a98175b11b427010a0cc20662a4bcb1d</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>2d8175b11b427010a0cc20662a4bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <value>承認が拒否された場合</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a98175b11b427010a0cc20662a4bcb1d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>a98175b11b427010a0cc20662a4bcb1d</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>a98175b11b427010a0cc20662a4bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}=rejected</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>a98175b11b427010a0cc20662a4bcb1d</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>e18175b11b427010a0cc20662a4bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">1c8d82351b827010a0cc20662a4bcbad</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Agri Request Approve">558135b11b427010a0cc20662a4bcbfa</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>c89d46351b827010a0cc20662a4bcb79</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:23</sys_updated_on>
+        <ui_id>f7b0cb84-cece-467f-91e4-13644c814dc5</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c89d46351b827010a0cc20662a4bcb79"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>c89d46351b827010a0cc20662a4bcb79</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>489d46351b827010a0cc20662a4bcb7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <value>承認が許可された場合</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c89d46351b827010a0cc20662a4bcb79"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>c89d46351b827010a0cc20662a4bcb79</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>c49d46351b827010a0cc20662a4bcb7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>c89d46351b827010a0cc20662a4bcb79</id>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:21</sys_created_on>
+        <sys_id>049d46351b827010a0cc20662a4bcb7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=558135b11b427010a0cc20662a4bcbfa^sys_idNOT INac9d46351b827010a0cc20662a4bcbd0,e89d46351b827010a0cc20662a4bcbd0"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>558135b11b427010a0cc20662a4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:23</sys_created_on>
+        <sys_id>ac9d46351b827010a0cc20662a4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:23</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f87e431a-af33-44b3-8fe6-9e5a7b9f7ad9</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>558135b11b427010a0cc20662a4bcbfa</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{662dfc04-dc44-4abe-931f-0dbb1151559f.approval_state}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:23</sys_created_on>
+        <sys_id>e89d46351b827010a0cc20662a4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:23</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f091ec82-18c1-4ff5-9f1d-df04d9af4cf5</ui_id>
+    </sys_hub_pill_compound>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_558135b11b427010a0cc20662a4bcbfa^sys_idNOT IN6d8175b11b427010a0cc20662a4bcb0b,bf8d46351b827010a0cc20662a4bcb34,e98175b11b427010a0cc20662a4bcb16,fb8d46351b827010a0cc20662a4bcb29"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>レコード</label>
+        <language>ja</language>
+        <name>var__m_sys_hub_flow_input_558135b11b427010a0cc20662a4bcbfa</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:50</sys_created_on>
+        <sys_id>6d8175b11b427010a0cc20662a4bcb0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_558135b11b427010a0cc20662a4bcbfa</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:20</sys_created_on>
+        <sys_id>bf8d46351b827010a0cc20662a4bcb34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>テーブル名</label>
+        <language>ja</language>
+        <name>var__m_sys_hub_flow_input_558135b11b427010a0cc20662a4bcbfa</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 04:22:51</sys_created_on>
+        <sys_id>e98175b11b427010a0cc20662a4bcb16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 04:22:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_558135b11b427010a0cc20662a4bcbfa</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 06:25:20</sys_created_on>
+        <sys_id>fb8d46351b827010a0cc20662a4bcb29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 06:25:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_flow action="update">
+        <sys_id>80b31374db8abc102f00152b1396194a</sys_id>
+        <latest_snapshot>558135b11b427010a0cc20662a4bcbfa</latest_snapshot>
+    </sys_hub_flow>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="All experiences">0d895eb8db86bc102f00152b139619fa</sc_cat_item>
+        <sc_category display_value="Request Participation">18791eb8db86bc102f00152b139619f4</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-16 04:44:01</sys_created_on>
+        <sys_id>56999eb8db86bc102f00152b139619ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Participation.All experiences</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sc_cat_item_category_56999eb8db86bc102f00152b139619ed</sys_update_name>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-16 04:44:01</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</application>
+        <file_path/>
+        <instance_id>a6a77fbd4f8092407b9b220f0310c71e</instance_id>
+        <instance_name>hackathon133</instance_name>
+        <name>sc_cat_item_category_56999eb8db86bc102f00152b139619ed</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="All experiences">0d895eb8db86bc102f00152b139619fa</sc_cat_item><sc_category display_value="Request Participation">18791eb8db86bc102f00152b139619f4</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>imada.satoshi</sys_created_by><sys_created_on>2021-08-16 04:44:01</sys_created_on><sys_id>56999eb8db86bc102f00152b139619ed</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Request Participation.All experiences</sys_name><sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package><sys_policy/><sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope><sys_update_name>sc_cat_item_category_56999eb8db86bc102f00152b139619ed</sys_update_name><sys_updated_by>imada.satoshi</sys_updated_by><sys_updated_on>2021-08-16 04:44:01</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>247591397</payload_hash>
+        <record_name>Request Participation.All experiences</record_name>
+        <reverted_from/>
+        <source>5c583134db46bc102f00152b139619e8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-16 04:44:01</sys_created_on>
+        <sys_id>da999eb8db86bc102f00152b139619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b4d460bf00000001</sys_recorded_at>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-16 04:44:01</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>16999eb8a886bc102b4e10866db94ef0</update_guid>
+        <update_guid_history>16999eb8a886bc102b4e10866db94ef0:247591397</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Request Participation.All experiences">b5e916f8db86bc102f00152b139619ff</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-16 04:45:21</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>1b89238e73e5484ca2814673397a3cf9</sys_id>
+        <sys_metadata>56999eb8db86bc102f00152b139619ed</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Participation.All experiences</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_scope_delete display_value="">30f5d9e60bfb43b3a26cbf00708813a9</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_56999eb8db86bc102f00152b139619ed</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_56999eb8db86bc102f00152b139619ed">da999eb8db86bc102f00152b139619f0</sys_update_version>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-16 04:45:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

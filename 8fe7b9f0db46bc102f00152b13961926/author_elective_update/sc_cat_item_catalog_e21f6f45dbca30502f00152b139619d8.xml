@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="農家側　体験登録">de1f2f45dbca30502f00152b139619d2</sc_cat_item>
+        <sc_catalog display_value="Now Agri">b3d812b8db86bc102f00152b13961987</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 05:36:04</sys_created_on>
+        <sys_id>e21f6f45dbca30502f00152b139619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Agri.農家側　体験登録</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_e21f6f45dbca30502f00152b139619d8</sys_update_name>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 05:36:04</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</application>
+        <file_path/>
+        <instance_id>a6a77fbd4f8092407b9b220f0310c71e</instance_id>
+        <instance_name>hackathon133</instance_name>
+        <name>sc_cat_item_catalog_e21f6f45dbca30502f00152b139619d8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="農家側　体験登録">de1f2f45dbca30502f00152b139619d2</sc_cat_item><sc_catalog display_value="Now Agri">b3d812b8db86bc102f00152b13961987</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>kuroiwa.kota</sys_created_by><sys_created_on>2021-08-17 05:36:04</sys_created_on><sys_id>e21f6f45dbca30502f00152b139619d8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Now Agri.農家側　体験登録</sys_name><sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package><sys_policy/><sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope><sys_update_name>sc_cat_item_catalog_e21f6f45dbca30502f00152b139619d8</sys_update_name><sys_updated_by>kuroiwa.kota</sys_updated_by><sys_updated_on>2021-08-17 05:36:04</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>1998901422</payload_hash>
+        <record_name>Now Agri.農家側　体験登録</record_name>
+        <reverted_from/>
+        <source>5c583134db46bc102f00152b139619e8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 05:36:04</sys_created_on>
+        <sys_id>261f6f45dbca30502f00152b139619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b529c10da0000001</sys_recorded_at>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 05:36:04</sys_updated_on>
+        <type>カタログアイテムカタログ</type>
+        <update_guid>aa1f6f45b6ca3050560500935cc786da</update_guid>
+        <update_guid_history>aa1f6f45b6ca3050560500935cc786da:1998901422</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Now Agri.農家側　体験登録">b57fa385dbca30502f00152b13961997</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 05:37:40</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>5ef970edf87b45589a1e072f1332e184</sys_id>
+        <sys_metadata>e21f6f45dbca30502f00152b139619d8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Agri.農家側　体験登録</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_scope_delete display_value="">30f5d9e60bfb43b3a26cbf00708813a9</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_e21f6f45dbca30502f00152b139619d8</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_e21f6f45dbca30502f00152b139619d8">261f6f45dbca30502f00152b139619db</sys_update_version>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 05:37:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

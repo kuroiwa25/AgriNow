@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name>returntohome()</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition> !current.isNewRecord() &amp;&amp; current.canWrite()</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style>primary</form_style>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Get Badge</name>
+        <onclick>returntohome()</onclick>
+        <order>100</order>
+        <script><![CDATA[current.update();
+
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>takatani.yuka</sys_created_by>
+        <sys_created_on>2021-08-19 13:24:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>38386bfddb4ab0502f00152b1396194c</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Get Badge</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sys_ui_action_38386bfddb4ab0502f00152b1396194c</sys_update_name>
+        <sys_updated_by>takatani.yuka</sys_updated_by>
+        <sys_updated_on>2021-08-19 15:03:40</sys_updated_on>
+        <table>x_snc_now_agri_agri_badge</table>
+        <ui11_compatible>false</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</application>
+        <file_path/>
+        <instance_id>a6a77fbd4f8092407b9b220f0310c71e</instance_id>
+        <instance_name>hackathon133</instance_name>
+        <name>sys_ui_action_38386bfddb4ab0502f00152b1396194c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;returntohome()&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition&gt; !current.isNewRecord() &amp;amp;&amp;amp; current.canWrite()&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style&gt;primary&lt;/form_style&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Get Badge&lt;/name&gt;&lt;onclick&gt;returntohome()&lt;/onclick&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[current.update();
+
+]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;takatani.yuka&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 13:24:52&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;38386bfddb4ab0502f00152b1396194c&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_name&gt;Get Badge&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Now Agri" source="x_snc_now_agri"&gt;8fe7b9f0db46bc102f00152b13961926&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Agri"&gt;8fe7b9f0db46bc102f00152b13961926&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_38386bfddb4ab0502f00152b1396194c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;takatani.yuka&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 15:03:40&lt;/sys_updated_on&gt;&lt;table&gt;x_snc_now_agri_agri_badge&lt;/table&gt;&lt;ui11_compatible&gt;false&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>125864947</payload_hash>
+        <record_name>Get Badge</record_name>
+        <reverted_from/>
+        <source>5c583134db46bc102f00152b139619e8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>takatani.yuka</sys_created_by>
+        <sys_created_on>2021-08-19 15:03:40</sys_created_on>
+        <sys_id>183444c6dbcab0502f00152b1396194c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b5ef06df20000001</sys_recorded_at>
+        <sys_updated_by>takatani.yuka</sys_updated_by>
+        <sys_updated_on>2021-08-19 15:03:40</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>903444c653cab050dd908890d625bd4c</update_guid>
+        <update_guid_history>903444c653cab050dd908890d625bd4c:125864947,d514c0c6dfcab05066ab5c71367b65be:-1283249325,d23bbf7d3e8ab050332e99050a81b728:-1588003497,f267ffb9638ab0502579f37edf620111:-1121283180,18373779158ab050fe17e6e2c02ac873:1800697801,79a4b379838ab05078a36384d0fa448f:-1367279389,bd743379508ab050c935f93e850a7c47:-153688240,b104f339b58ab050c719173a943dfa96:966297583,2b33b339678ab0504279897743143930:-2119228472,8a237ff5f28ab0505da3b2ab54da3d7d:1460658215,15a2bbf59e8ab0507f42613e4e764a2e:-101132966,d6127bb5458ab05035808f0232af83a2:1175629499,86ef2b75698ab050710b10a06db58ead:-1602086503,367faf35718ab0506ade09d5f333e1c1:1199039737,459d6ff1b38ab05043f2dc62acee5503:-167243753</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>takatani.yuka</sys_created_by>
+        <sys_created_on>2021-08-19 15:05:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>281b2d07a4f7487e8fa8327d85bf8cf9</sys_id>
+        <sys_metadata>38386bfddb4ab0502f00152b1396194c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Badge</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_parent display_value="ガチャ">a98a15a11b463010a0cc20662a4bcb8f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_scope_delete display_value="">30f5d9e60bfb43b3a26cbf00708813a9</sys_scope_delete>
+        <sys_update_name>sys_ui_action_38386bfddb4ab0502f00152b1396194c</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_38386bfddb4ab0502f00152b1396194c">183444c6dbcab0502f00152b1396194c</sys_update_version>
+        <sys_updated_by>takatani.yuka</sys_updated_by>
+        <sys_updated_on>2021-08-19 15:05:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
