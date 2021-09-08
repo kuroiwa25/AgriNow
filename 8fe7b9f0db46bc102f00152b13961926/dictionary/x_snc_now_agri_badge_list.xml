@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Badge List" max_length="40" name="x_snc_now_agri_badge_list" sizeclass="3" type="collection">
+        <element label="Badge" max_length="40" name="badge" type="user_image"/>
+        <element default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Badge Id" mandatory="true" max_length="100" name="badge_id" type="integer" use_dynamic_default="true"/>
+        <element label="Badge Name" mandatory="true" max_length="100" name="badge_name" type="string"/>
+    </element>
+</database>

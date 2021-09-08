@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="alm_asset" label="ガチャ" max_length="40" name="x_snc_now_agri_agri_badge" sizeclass="8" type="collection">
+        <element default="javascript: Math.floor(Math.random() * 4).toFixed(0);&#13;&#10;" display="true" label="Badge_Number" max_length="100" name="badge_number" reference="x_snc_now_agri_badge_list" reference_key="badge_id" type="reference"/>
+        <index name="index">
+            <element name="badge_number"/>
+        </index>
+    </element>
+</database>

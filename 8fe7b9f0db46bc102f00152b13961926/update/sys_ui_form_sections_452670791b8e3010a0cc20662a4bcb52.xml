@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="452670791b8e3010a0cc20662a4bcb52" sys_domain="global" table="x_snc_now_agri_agri_badge" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>takatani.yuka</sys_created_by>
+            <sys_created_on>2021-08-19 00:03:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5d26b0791b8e3010a0cc20662a4bcb00</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_now_agri_agri_badge" name="x_snc_now_agri_agri_badge" sys_domain="global" view="Default view">452670791b8e3010a0cc20662a4bcb52</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_now_agri_agri_badge" sys_domain="global" view="Default view">912670791b8e3010a0cc20662a4bcbfa</sys_ui_section>
+            <sys_updated_by>takatani.yuka</sys_updated_by>
+            <sys_updated_on>2021-08-19 00:03:25</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_now_agri_agri_badge</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>takatani.yuka</sys_created_by>
+            <sys_created_on>2021-08-19 00:03:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>452670791b8e3010a0cc20662a4bcb52</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_now_agri_agri_badge</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+            <sys_update_name>sys_ui_form_sections_452670791b8e3010a0cc20662a4bcb52</sys_update_name>
+            <sys_updated_by>takatani.yuka</sys_updated_by>
+            <sys_updated_on>2021-08-19 00:03:24</sys_updated_on>
+            <sys_user/>
+            <view display_value="デフォルトビュー" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

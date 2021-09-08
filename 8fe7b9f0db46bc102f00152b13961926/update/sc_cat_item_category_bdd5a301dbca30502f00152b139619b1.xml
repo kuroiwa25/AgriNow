@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="体験登録">2175efcddb8a30502f00152b13961934</sc_cat_item>
+        <sc_category display_value="農家メニュー">b1794bcddb4a30502f00152b13961991</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 04:55:36</sys_created_on>
+        <sys_id>bdd5a301dbca30502f00152b139619b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>農家側　カテゴリ.農家側　体験登録</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sc_cat_item_category_bdd5a301dbca30502f00152b139619b1</sys_update_name>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 04:55:36</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

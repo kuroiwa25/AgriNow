@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>other</category>
+        <client_script><![CDATA[function($rootScope,$timeout) {
+  // widget controller
+  var c = this;
+	var bc = [{label: c.data.widgetTitle, url: '#'}];
+	$timeout(function() {
+		$rootScope.$broadcast('sp.update.breadcrumbs', bc);
+	});
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.instance-display-text{&#13;
+  padding:2px;&#13;
+}&#13;
+&#13;
+.survey-panel-spacer{&#13;
+  margin : 24px;&#13;
+}&#13;
+&#13;
+.survey-title {&#13;
+  font-weight: bold;&#13;
+}&#13;
+&#13;
+.survey-title a {&#13;
+  color:black;&#13;
+}&#13;
+&#13;
+.card-bottom {&#13;
+  margin-top:9px;&#13;
+}&#13;
+&#13;
+.progress-bar, .progress-bar-inner {&#13;
+  width:100%;&#13;
+  height:9px;&#13;
+  border-radius:4px;&#13;
+}&#13;
+&#13;
+.progress-bar {&#13;
+  background:#BDC3C7;&#13;
+  margin-top:5px;&#13;
+}&#13;
+&#13;
+.progress-bar-inner {&#13;
+  background:#278efc;&#13;
+}&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>My Agri Surveys</name>
+        <option_schema>[{"name":"maxRecords","section":"Presentation","label":"Max Records","type":"integer"},{"name":"widgetTitle","section":"Presentation","label":"Title of the Widget","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  // populate the 'data' object
+  // e.g., data.table = $sp.getValue('table');
+	data.maxRecords = options.maxRecords || 5;
+	var sp = new SPSurveyAPI();
+	options.showAll = $sp.getParameter('id') == 'my_surveys';
+	if($sp.getParameter('id') != 'my_surveys'){
+		if(options.widgetTitle && options.widgetTitle.length>0){
+			data.widgetTitle = options.widgetTitle;
+		}else{
+			data.widgetTitle = gs.getMessage("My Surveys");
+		}
+		data.encodedWidgetTitle = encodeURIComponent(data.widgetTitle);
+	} else{
+		data.widgetTitle = $sp.getParameter('title') || gs.getMessage("Surveys");
+	}
+	
+	sp.getSurveys(data.maxRecords, options.showAll, data);
+	data.instances.forEach(function(instance) {
+		if (!!instance.description)
+			instance.description = $sp.stripHTML(instance.description);
+	});
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-16 13:55:05</sys_created_on>
+        <sys_id>6ab794c91b027c10a0cc20662a4bcb68</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>My Agri Surveys</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sp_widget_6ab794c91b027c10a0cc20662a4bcb68</sys_update_name>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-16 13:55:28</sys_updated_on>
+        <template><![CDATA[<div ng-if="!(options.showAll && options.showAll != 'false' && data.instances.length && data.totalRecords == data.maxRecords && data.totalRecords != 0)">
+	<div class="panel panel-{{::options.color}} b">
+		<div class="panel-heading">
+			<h4 class="panel-title"><fa ng-if="::options.glyph.length" name="{{::options.glyph}}" class="m-r-sm" />{{::data.widgetTitle}}</h4>
+		</div>
+			<div class="list-group" ng-if="data.instances.length && data.totalRecords > 0">
+				<div class="list-group-item" ng-repeat="instance in data.instances track by $index">
+					<div>
+						<a href="?id=take_survey&instance_id={{::instance.sys_id}}" title = "Take {{::instance.evaluation_method_display}}">
+                          <table><tr>
+                          <td><span  class = "survey-icon icon-article-document"
+                                  ng-if="(instance.evaluation_method == 'assessment' || instance.evaluation_method == 'attestation_v2' || instance.evaluation_method == 'risk_assessment')"></span>
+                            <span ng-if="(instance.evaluation_method == 'survey' || instance.evaluation_method == 'quiz')" class="survey-icon icon-form"></span></td>
+                          <td class="instance-display-text">{{::instance.display}}</td></tr></table>
+                      </a>
+					</div>
+					<div>
+						<small ng-if="instance.trigger_id">
+							<a style="color:inherit;text-decoration:underline" href="?id=ticket&table={{::instance.trigger_table}}&sys_id={{::instance.trigger_id}}">{{::instance.trigger_display}}</a>
+							<span> • </span>
+						</small>
+						<small>
+							<span>{{::instance.due_display}}</span>
+						</small>
+					</div>
+
+				</div>
+			</div>
+			<div ng-if="data.totalRecords ==0" class="panel-body ng-scope">
+				${You have no surveys to take}
+			</div>
+			<div class="panel-footer" ng-if="data.totalRecords > data.maxRecords">
+				<h4 class="panel-title row">
+					<div class="col-xs-6">
+						<span>{{::data.recordsShownMsg}}</span>
+					</div>
+					<div class="col-xs-6 text-right">
+						<a href="?id=my_surveys&title={{::data.encodedWidgetTitle}}">${View all}</a>
+					</div>
+			 	</h4>
+			</div>
+	</div>
+</div>
+
+<div ng-if="options.showAll && options.showAll != 'false' && data.instances.length && data.totalRecords == data.maxRecords && data.totalRecords != 0">
+  <div class = "survey-panel-spacer"/>
+  <h2>{{::data.widgetTitle}}</h2>
+  <div class="row">
+    <div class="col-sm-6 col-md-4 wrapper-xs" ng-repeat="instance in data.instances track by $index">
+      <div class="panel panel-default wrapper-sm">
+
+        <div class="row">
+          <div class="col-xs-12 survey-title" style="height:20px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">
+            <a href="?id=take_survey&instance_id={{::instance.sys_id}}" title = "Take {{::instance.evaluation_method_display}}">
+                          <table><tr>
+                          <td><span  class = "survey-icon icon-article-document"
+                                  ng-if="(instance.evaluation_method == 'assessment' || instance.evaluation_method == 'attestation_v2' || instance.evaluation_method == 'risk_assessment')"></span>
+                            <span ng-if="(instance.evaluation_method == 'survey' || instance.evaluation_method == 'quiz')" class="survey-icon icon-form"></span></td>
+                          <td class="instance-display-text">{{::instance.display}}</td></tr></table>
+          </a>    
+          </div>
+          <div class="col-xs-12" ng-if="instance.trigger_description" style="height:20px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">
+            {{::instance.trigger_description}}
+          </div>
+          <div class="col-xs-12" ng-if="!instance.trigger_description" style="height:20px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">
+            {{::instance.description}}
+          </div>
+        </div>
+
+        <div class="card-bottom" style="font-size:12px;">
+
+          <div class="row">
+            <div class="col-xs-8" style="height:17px;">
+							<span ng-if="instance.can_retake">${Completed. Do you want to retake?}</span>
+            </div>
+            <div class="col-xs-4 text-right" style="height:17px">
+              <a  ng-if="instance.trigger_table_display" href="?id=ticket&table={{::instance.trigger_table}}&sys_id={{::instance.trigger_id}}">{{::instance.trigger_display}}</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-8">
+              <div class="progress-bar" ng-if="instance.percent_answered > '0'">
+                <div class="progress-bar-inner" ng-style="{width: instance.percent_answered + '%'}"></div>
+              </div>
+            </div>
+            <div class="col-xs-4 text-right">
+              <div class="due-date">{{::instance.due_display}}</div>
+            </div>
+          </div>
+
+        </div> <!-- end div.card-bottom -->
+
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</application>
+        <file_path/>
+        <instance_id>a6a77fbd4f8092407b9b220f0310c71e</instance_id>
+        <instance_name>hackathon133</instance_name>
+        <name>sp_widget_6ab794c91b027c10a0cc20662a4bcb68</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;other&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function($rootScope,$timeout) {
+  // widget controller
+  var c = this;
+	var bc = [{label: c.data.widgetTitle, url: '#'}];
+	$timeout(function() {
+		$rootScope.$broadcast('sp.update.breadcrumbs', bc);
+	});
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.instance-display-text{&amp;#13;
+  padding:2px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.survey-panel-spacer{&amp;#13;
+  margin : 24px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.survey-title {&amp;#13;
+  font-weight: bold;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.survey-title a {&amp;#13;
+  color:black;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.card-bottom {&amp;#13;
+  margin-top:9px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.progress-bar, .progress-bar-inner {&amp;#13;
+  width:100%;&amp;#13;
+  height:9px;&amp;#13;
+  border-radius:4px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.progress-bar {&amp;#13;
+  background:#BDC3C7;&amp;#13;
+  margin-top:5px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.progress-bar-inner {&amp;#13;
+  background:#278efc;&amp;#13;
+}&amp;#13;
+&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;My Agri Surveys&lt;/name&gt;&lt;option_schema&gt;[{"name":"maxRecords","section":"Presentation","label":"Max Records","type":"integer"},{"name":"widgetTitle","section":"Presentation","label":"Title of the Widget","type":"string"}]&lt;/option_schema&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  // populate the 'data' object
+  // e.g., data.table = $sp.getValue('table');
+	data.maxRecords = options.maxRecords || 5;
+	var sp = new SPSurveyAPI();
+	options.showAll = $sp.getParameter('id') == 'my_surveys';
+	if($sp.getParameter('id') != 'my_surveys'){
+		if(options.widgetTitle &amp;&amp; options.widgetTitle.length&gt;0){
+			data.widgetTitle = options.widgetTitle;
+		}else{
+			data.widgetTitle = gs.getMessage("My Surveys");
+		}
+		data.encodedWidgetTitle = encodeURIComponent(data.widgetTitle);
+	} else{
+		data.widgetTitle = $sp.getParameter('title') || gs.getMessage("Surveys");
+	}
+	
+	sp.getSurveys(data.maxRecords, options.showAll, data);
+	data.instances.forEach(function(instance) {
+		if (!!instance.description)
+			instance.description = $sp.stripHTML(instance.description);
+	});
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;imada.satoshi&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-16 13:55:05&lt;/sys_created_on&gt;&lt;sys_id&gt;6ab794c91b027c10a0cc20662a4bcb68&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;My Agri Surveys&lt;/sys_name&gt;&lt;sys_package display_value="Now Agri" source="x_snc_now_agri"&gt;8fe7b9f0db46bc102f00152b13961926&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Agri"&gt;8fe7b9f0db46bc102f00152b13961926&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_6ab794c91b027c10a0cc20662a4bcb68&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;imada.satoshi&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-16 13:55:28&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div ng-if="!(options.showAll &amp;&amp; options.showAll != 'false' &amp;&amp; data.instances.length &amp;&amp; data.totalRecords == data.maxRecords &amp;&amp; data.totalRecords != 0)"&gt;
+	&lt;div class="panel panel-{{::options.color}} b"&gt;
+		&lt;div class="panel-heading"&gt;
+			&lt;h4 class="panel-title"&gt;&lt;fa ng-if="::options.glyph.length" name="{{::options.glyph}}" class="m-r-sm" /&gt;{{::data.widgetTitle}}&lt;/h4&gt;
+		&lt;/div&gt;
+			&lt;div class="list-group" ng-if="data.instances.length &amp;&amp; data.totalRecords &gt; 0"&gt;
+				&lt;div class="list-group-item" ng-repeat="instance in data.instances track by $index"&gt;
+					&lt;div&gt;
+						&lt;a href="?id=take_survey&amp;instance_id={{::instance.sys_id}}" title = "Take {{::instance.evaluation_method_display}}"&gt;
+                          &lt;table&gt;&lt;tr&gt;
+                          &lt;td&gt;&lt;span  class = "survey-icon icon-article-document"
+                                  ng-if="(instance.evaluation_method == 'assessment' || instance.evaluation_method == 'attestation_v2' || instance.evaluation_method == 'risk_assessment')"&gt;&lt;/span&gt;
+                            &lt;span ng-if="(instance.evaluation_method == 'survey' || instance.evaluation_method == 'quiz')" class="survey-icon icon-form"&gt;&lt;/span&gt;&lt;/td&gt;
+                          &lt;td class="instance-display-text"&gt;{{::instance.display}}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+                      &lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div&gt;
+						&lt;small ng-if="instance.trigger_id"&gt;
+							&lt;a style="color:inherit;text-decoration:underline" href="?id=ticket&amp;table={{::instance.trigger_table}}&amp;sys_id={{::instance.trigger_id}}"&gt;{{::instance.trigger_display}}&lt;/a&gt;
+							&lt;span&gt; • &lt;/span&gt;
+						&lt;/small&gt;
+						&lt;small&gt;
+							&lt;span&gt;{{::instance.due_display}}&lt;/span&gt;
+						&lt;/small&gt;
+					&lt;/div&gt;
+
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div ng-if="data.totalRecords ==0" class="panel-body ng-scope"&gt;
+				${You have no surveys to take}
+			&lt;/div&gt;
+			&lt;div class="panel-footer" ng-if="data.totalRecords &gt; data.maxRecords"&gt;
+				&lt;h4 class="panel-title row"&gt;
+					&lt;div class="col-xs-6"&gt;
+						&lt;span&gt;{{::data.recordsShownMsg}}&lt;/span&gt;
+					&lt;/div&gt;
+					&lt;div class="col-xs-6 text-right"&gt;
+						&lt;a href="?id=my_surveys&amp;title={{::data.encodedWidgetTitle}}"&gt;${View all}&lt;/a&gt;
+					&lt;/div&gt;
+			 	&lt;/h4&gt;
+			&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div ng-if="options.showAll &amp;&amp; options.showAll != 'false' &amp;&amp; data.instances.length &amp;&amp; data.totalRecords == data.maxRecords &amp;&amp; data.totalRecords != 0"&gt;
+  &lt;div class = "survey-panel-spacer"/&gt;
+  &lt;h2&gt;{{::data.widgetTitle}}&lt;/h2&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-6 col-md-4 wrapper-xs" ng-repeat="instance in data.instances track by $index"&gt;
+      &lt;div class="panel panel-default wrapper-sm"&gt;
+
+        &lt;div class="row"&gt;
+          &lt;div class="col-xs-12 survey-title" style="height:20px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap"&gt;
+            &lt;a href="?id=take_survey&amp;instance_id={{::instance.sys_id}}" title = "Take {{::instance.evaluation_method_display}}"&gt;
+                          &lt;table&gt;&lt;tr&gt;
+                          &lt;td&gt;&lt;span  class = "survey-icon icon-article-document"
+                                  ng-if="(instance.evaluation_method == 'assessment' || instance.evaluation_method == 'attestation_v2' || instance.evaluation_method == 'risk_assessment')"&gt;&lt;/span&gt;
+                            &lt;span ng-if="(instance.evaluation_method == 'survey' || instance.evaluation_method == 'quiz')" class="survey-icon icon-form"&gt;&lt;/span&gt;&lt;/td&gt;
+                          &lt;td class="instance-display-text"&gt;{{::instance.display}}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+          &lt;/a&gt;    
+          &lt;/div&gt;
+          &lt;div class="col-xs-12" ng-if="instance.trigger_description" style="height:20px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap"&gt;
+            {{::instance.trigger_description}}
+          &lt;/div&gt;
+          &lt;div class="col-xs-12" ng-if="!instance.trigger_description" style="height:20px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap"&gt;
+            {{::instance.description}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="card-bottom" style="font-size:12px;"&gt;
+
+          &lt;div class="row"&gt;
+            &lt;div class="col-xs-8" style="height:17px;"&gt;
+							&lt;span ng-if="instance.can_retake"&gt;${Completed. Do you want to retake?}&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-4 text-right" style="height:17px"&gt;
+              &lt;a  ng-if="instance.trigger_table_display" href="?id=ticket&amp;table={{::instance.trigger_table}}&amp;sys_id={{::instance.trigger_id}}"&gt;{{::instance.trigger_display}}&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="row"&gt;
+            &lt;div class="col-xs-8"&gt;
+              &lt;div class="progress-bar" ng-if="instance.percent_answered &gt; '0'"&gt;
+                &lt;div class="progress-bar-inner" ng-style="{width: instance.percent_answered + '%'}"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-4 text-right"&gt;
+              &lt;div class="due-date"&gt;{{::instance.due_display}}&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt; &lt;!-- end div.card-bottom --&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-92523677</payload_hash>
+        <record_name>My Agri Surveys</record_name>
+        <reverted_from/>
+        <source>5c583134db46bc102f00152b139619e8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-16 13:55:28</sys_created_on>
+        <sys_id>1cd794c91b027c10a0cc20662a4bcb54</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b4f3eebc00000001</sys_recorded_at>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-16 13:55:28</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>54d794c9d7027c10c0814cf09531a354</update_guid>
+        <update_guid_history>54d794c9d7027c10c0814cf09531a354:-92523677,a6b794c945027c10c66d40c43c666f6b:-1782486923</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="My Agri Surveys">6b3f18c91b427c10a0cc20662a4bcb77</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-16 14:27:55</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>03cdd0cbb09f4a06b2324c8bd457bc84</sys_id>
+        <sys_metadata>6ab794c91b027c10a0cc20662a4bcb68</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Agri Surveys</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_scope_delete display_value="">30f5d9e60bfb43b3a26cbf00708813a9</sys_scope_delete>
+        <sys_update_name>sp_widget_6ab794c91b027c10a0cc20662a4bcb68</sys_update_name>
+        <sys_update_version display_value="sp_widget_6ab794c91b027c10a0cc20662a4bcb68">1cd794c91b027c10a0cc20662a4bcb54</sys_update_version>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-16 14:27:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

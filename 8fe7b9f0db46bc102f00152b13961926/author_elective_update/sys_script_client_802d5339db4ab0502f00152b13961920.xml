@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>badge_number</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Randomly set Badge Number</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	g_form.setDisplay('badge_number', '1');
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>takatani.yuka</sys_created_by>
+        <sys_created_on>2021-08-19 12:14:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>802d5339db4ab0502f00152b13961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Randomly set Badge Number</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sys_script_client_802d5339db4ab0502f00152b13961920</sys_update_name>
+        <sys_updated_by>takatani.yuka</sys_updated_by>
+        <sys_updated_on>2021-08-19 12:14:37</sys_updated_on>
+        <table>x_snc_now_agri_agri_badge</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view>csp</view>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</application>
+        <file_path/>
+        <instance_id>a6a77fbd4f8092407b9b220f0310c71e</instance_id>
+        <instance_name>hackathon133</instance_name>
+        <name>sys_script_client_802d5339db4ab0502f00152b13961920</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;badge_number&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Randomly set Badge Number&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+	g_form.setDisplay('badge_number', '1');
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;takatani.yuka&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 12:14:37&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;802d5339db4ab0502f00152b13961920&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Randomly set Badge Number&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Now Agri" source="x_snc_now_agri"&gt;8fe7b9f0db46bc102f00152b13961926&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Agri"&gt;8fe7b9f0db46bc102f00152b13961926&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_802d5339db4ab0502f00152b13961920&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;takatani.yuka&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 12:14:37&lt;/sys_updated_on&gt;&lt;table&gt;x_snc_now_agri_agri_badge&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view&gt;csp&lt;/view&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>365086265</payload_hash>
+        <record_name>Randomly set Badge Number</record_name>
+        <reverted_from/>
+        <source>5c583134db46bc102f00152b139619e8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>takatani.yuka</sys_created_by>
+        <sys_created_on>2021-08-19 12:14:37</sys_created_on>
+        <sys_id>0c8d5739db4ab0502f00152b1396198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b5e55a8ec0000001</sys_recorded_at>
+        <sys_updated_by>takatani.yuka</sys_updated_by>
+        <sys_updated_on>2021-08-19 12:14:37</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>448d57390d4ab050b58579ddfc08268d</update_guid>
+        <update_guid_history>448d57390d4ab050b58579ddfc08268d:365086265</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>takatani.yuka</sys_created_by>
+        <sys_created_on>2021-08-19 12:17:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>11d584eedaa648c691339acfbd719dc4</sys_id>
+        <sys_metadata>802d5339db4ab0502f00152b13961920</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Randomly set Badge Number</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_parent display_value="ガチャ">a98a15a11b463010a0cc20662a4bcb8f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_scope_delete display_value="">30f5d9e60bfb43b3a26cbf00708813a9</sys_scope_delete>
+        <sys_update_name>sys_script_client_802d5339db4ab0502f00152b13961920</sys_update_name>
+        <sys_update_version display_value="sys_script_client_802d5339db4ab0502f00152b13961920">0c8d5739db4ab0502f00152b1396198d</sys_update_version>
+        <sys_updated_by>takatani.yuka</sys_updated_by>
+        <sys_updated_on>2021-08-19 12:17:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

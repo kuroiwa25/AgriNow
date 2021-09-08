@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>now_agri</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-16 04:20:02</sys_created_on>
+        <sys_id>321456b4db86bc102f00152b1396193d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Agri</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sys_ui_view_321456b4db86bc102f00152b1396193d</sys_update_name>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-16 04:20:02</sys_updated_on>
+        <title>Now Agri</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Badge List" language="en" table="x_snc_now_agri_badge_list">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Badge List</label>
+            <language>en</language>
+            <name>x_snc_now_agri_badge_list</name>
+            <plural>Badge Lists</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>takatani.yuka</sys_created_by>
+            <sys_created_on>2021-08-19 04:30:09</sys_created_on>
+            <sys_id>1433bdf11b427010a0cc20662a4bcb80</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Badge List</sys_name>
+            <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_now_agri_badge_list__en</sys_update_name>
+            <sys_updated_by>takatani.yuka</sys_updated_by>
+            <sys_updated_on>2021-08-19 04:30:09</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

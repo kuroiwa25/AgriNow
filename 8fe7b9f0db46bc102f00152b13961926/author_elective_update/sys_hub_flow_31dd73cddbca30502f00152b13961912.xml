@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>畑の写真を送信する</description>
+        <internal_name>agri_send_fhoto</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Agri Send Fhoto</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 06:40:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>31dd73cddbca30502f00152b13961912</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Agri Send Fhoto</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>sys_hub_flow_31dd73cddbca30502f00152b13961912</sys_update_name>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 06:40:27</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=31dd73cddbca30502f00152b13961912"/>
+    <sys_translated_text action="DELETE">
+        <documentkey>31dd73cddbca30502f00152b13961912</documentkey>
+        <fieldname>annotation</fieldname>
+        <language>ja</language>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 06:40:28</sys_created_on>
+        <sys_id>b5dd73cddbca30502f00152b13961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 06:40:28</sys_updated_on>
+        <tablename>sys_hub_flow</tablename>
+        <value/>
+    </sys_translated_text>
+    <sys_variable_value action="DELETE" query="document_key=31dd73cddbca30502f00152b13961912"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=31dd73cddbca30502f00152b13961912^sys_idNOT INf1dd73cddbca30502f00152b13961919"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>31dd73cddbca30502f00152b13961912</id>
+        <name>Agri Send Fhoto</name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 06:40:28</sys_created_on>
+        <sys_id>f1dd73cddbca30502f00152b13961919</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 06:40:28</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</application>
+        <file_path/>
+        <instance_id>a6a77fbd4f8092407b9b220f0310c71e</instance_id>
+        <instance_name>hackathon133</instance_name>
+        <name>sys_hub_flow_31dd73cddbca30502f00152b13961912</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow"><sys_hub_flow action="INSERT_OR_UPDATE"><access>public</access><acls/><active>false</active><annotation/><callable_by_client_api>false</callable_by_client_api><category/><compiler_build/><copied_from/><copied_from_name/><description>畑の写真を送信する</description><internal_name>agri_send_fhoto</internal_name><label_cache>[]</label_cache><latest_snapshot/><master_snapshot/><name>Agri Send Fhoto</name><natlang/><outputs/><remote_trigger_id/><run_as>user</run_as><run_with_roles/><sc_callable>false</sc_callable><show_draft_actions>false</show_draft_actions><show_triggered_flows>false</show_triggered_flows><status>draft</status><sys_class_name>sys_hub_flow</sys_class_name><sys_created_by>kuroiwa.kota</sys_created_by><sys_created_on>2021-08-17 06:40:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>31dd73cddbca30502f00152b13961912</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Agri Send Fhoto</sys_name><sys_overrides/><sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package><sys_policy/><sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope><sys_update_name>sys_hub_flow_31dd73cddbca30502f00152b13961912</sys_update_name><sys_updated_by>kuroiwa.kota</sys_updated_by><sys_updated_on>2021-08-17 06:40:27</sys_updated_on><type>flow</type></sys_hub_flow><sys_translated_text action="delete_multiple" query="documentkey=31dd73cddbca30502f00152b13961912"/><sys_translated_text action="INSERT_OR_UPDATE"><documentkey>31dd73cddbca30502f00152b13961912</documentkey><fieldname>annotation</fieldname><language>ja</language><sys_created_by>kuroiwa.kota</sys_created_by><sys_created_on>2021-08-17 06:40:28</sys_created_on><sys_id>b5dd73cddbca30502f00152b13961914</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>kuroiwa.kota</sys_updated_by><sys_updated_on>2021-08-17 06:40:28</sys_updated_on><tablename>sys_hub_flow</tablename><value/></sys_translated_text><sys_variable_value action="delete_multiple" query="document_key=31dd73cddbca30502f00152b13961912"/><sys_flow_cat_variable_model action="delete_multiple" query="id=31dd73cddbca30502f00152b13961912^sys_idNOT INf1dd73cddbca30502f00152b13961919"/><sys_flow_cat_variable_model action="INSERT_OR_UPDATE"><id>31dd73cddbca30502f00152b13961912</id><name>Agri Send Fhoto</name><sys_created_by>kuroiwa.kota</sys_created_by><sys_created_on>2021-08-17 06:40:28</sys_created_on><sys_id>f1dd73cddbca30502f00152b13961919</sys_id><sys_mod_count>0</sys_mod_count><sys_scope/><sys_updated_by>kuroiwa.kota</sys_updated_by><sys_updated_on>2021-08-17 06:40:28</sys_updated_on></sys_flow_cat_variable_model></record_update>]]></payload>
+        <payload_hash>1835165414</payload_hash>
+        <record_name>Agri Send Fhoto</record_name>
+        <reverted_from/>
+        <source>5c583134db46bc102f00152b139619e8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-17 06:40:28</sys_created_on>
+        <sys_id>39ddf3cddbca30502f00152b1396194c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b52d7050d0000001</sys_recorded_at>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-17 06:40:28</sys_updated_on>
+        <type>フロー</type>
+        <update_guid>b1ddf3cd87ca30508ac3609cfb3b574c</update_guid>
+        <update_guid_history>b1ddf3cd87ca30508ac3609cfb3b574c:1835165414,75dd73cdacca3050d332cee2654a2f18:-13768988</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>kuroiwa.kota</sys_created_by>
+        <sys_created_on>2021-08-19 02:43:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>014f6ff04e49479882092b8919ead084</sys_id>
+        <sys_metadata>31dd73cddbca30502f00152b13961912</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Agri Send Fhoto</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_scope_delete display_value="">30f5d9e60bfb43b3a26cbf00708813a9</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_31dd73cddbca30502f00152b13961912</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_31dd73cddbca30502f00152b13961912">39ddf3cddbca30502f00152b1396194c</sys_update_version>
+        <sys_updated_by>kuroiwa.kota</sys_updated_by>
+        <sys_updated_on>2021-08-19 02:43:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="DELETE">
+        <sp_dependency display_value="RetinaIconsCSS">ed4d86b06700320080c6c3105685ef41</sp_dependency>
+        <sp_widget display_value="Copy of My Surveys">6ab794c91b027c10a0cc20662a4bcb68</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-16 13:55:05</sys_created_on>
+        <sys_id>e6b794c91b027c10a0cc20662a4bcb6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RetinaIconsCSS.Copy of My Surveys</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_e6b794c91b027c10a0cc20662a4bcb6c</sys_update_name>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-16 13:55:05</sys_updated_on>
+    </m2m_sp_widget_dependency>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</application>
+        <file_path/>
+        <instance_id>a6a77fbd4f8092407b9b220f0310c71e</instance_id>
+        <instance_name>hackathon133</instance_name>
+        <name>m2m_sp_widget_dependency_e6b794c91b027c10a0cc20662a4bcb6c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency"><m2m_sp_widget_dependency action="INSERT_OR_UPDATE"><sp_dependency display_value="RetinaIconsCSS">ed4d86b06700320080c6c3105685ef41</sp_dependency><sp_widget display_value="Copy of My Surveys">6ab794c91b027c10a0cc20662a4bcb68</sp_widget><sys_class_name>m2m_sp_widget_dependency</sys_class_name><sys_created_by>imada.satoshi</sys_created_by><sys_created_on>2021-08-16 13:55:05</sys_created_on><sys_id>e6b794c91b027c10a0cc20662a4bcb6c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>RetinaIconsCSS.Copy of My Surveys</sys_name><sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package><sys_policy/><sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope><sys_update_name>m2m_sp_widget_dependency_e6b794c91b027c10a0cc20662a4bcb6c</sys_update_name><sys_updated_by>imada.satoshi</sys_updated_by><sys_updated_on>2021-08-16 13:55:05</sys_updated_on></m2m_sp_widget_dependency></record_update>]]></payload>
+        <payload_hash>867183737</payload_hash>
+        <record_name>RetinaIconsCSS.Copy of My Surveys</record_name>
+        <reverted_from/>
+        <source>5c583134db46bc102f00152b139619e8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-16 13:55:05</sys_created_on>
+        <sys_id>eeb7100d1b027c10a0cc20662a4bcb4b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b4f3e8fe40000001</sys_recorded_at>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-16 13:55:05</sys_updated_on>
+        <type>Widget Dependency</type>
+        <update_guid>2ab7100d57027c10e23d0d6329fbad4b</update_guid>
+        <update_guid_history>2ab7100d57027c10e23d0d6329fbad4b:867183737</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="RetinaIconsCSS.Copy of My Surveys">673f18c91b427c10a0cc20662a4bcb72</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>imada.satoshi</sys_created_by>
+        <sys_created_on>2021-08-16 14:27:55</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_widget_dependency">m2m_sp_widget_dependency</sys_db_object>
+        <sys_id>75d625cc5a094da09077c946e0ffa100</sys_id>
+        <sys_metadata>e6b794c91b027c10a0cc20662a4bcb6c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RetinaIconsCSS.Copy of My Surveys</sys_name>
+        <sys_package display_value="Now Agri" source="x_snc_now_agri">8fe7b9f0db46bc102f00152b13961926</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Agri">8fe7b9f0db46bc102f00152b13961926</sys_scope>
+        <sys_scope_delete display_value="">30f5d9e60bfb43b3a26cbf00708813a9</sys_scope_delete>
+        <sys_update_name>m2m_sp_widget_dependency_e6b794c91b027c10a0cc20662a4bcb6c</sys_update_name>
+        <sys_update_version display_value="m2m_sp_widget_dependency_e6b794c91b027c10a0cc20662a4bcb6c">eeb7100d1b027c10a0cc20662a4bcb4b</sys_update_version>
+        <sys_updated_by>imada.satoshi</sys_updated_by>
+        <sys_updated_on>2021-08-16 14:27:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
